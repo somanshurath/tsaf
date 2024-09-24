@@ -1,3 +1,25 @@
+### Trend (long term mean changes) + Seasonal (regular repeating pattern)
+Xt = Tt + St + Et or
+Xt = Tt * St + Et or
+Xt = Tt * St * Et
+
+1. Classical Decomp
+	a. Est Tt
+	b. Detrend TS (Subtract or Divide): TS - or / Trend
+	c. Est seasonal comp by avg detrended data across corres periods
+
+2. Seasonal differencing
+	Yt = Yt - Y(t-12)
+
+
+Stationary Stochastic Process - Process in state of statistical equilibrium
+
+1. Strict Stationarity
+	Joint Distribution of X(t1)..... X(tk) is same as Joint Distribution of X(t1 + y)..... X(tk + y) 
+2. Weak stationarity
+
+### ADF / ACF / PACF Tests
+
 1. Augmented Dickey-Fuller (ADF) Test:
 Purpose: The ADF test checks for stationarity in the differenced time series. A stationary series is one where the statistical properties (mean, variance, autocorrelation) do not change over time.
 How it works: The null hypothesis for the ADF test is that the time series has a unit root (i.e., it is non-stationary). If the p-value from the test is below a certain threshold (commonly 0.05), you reject the null hypothesis, indicating that the time series is stationary.
@@ -28,3 +50,11 @@ Non Stationary -> Stationary (for analysis)
 Can be done by doing:
 - Differencing
 - Transformation
+
+
+### Linear Regression
+
+linear regression assumptions:
+1. linearity (poly/splines)
+2. independence of errors (autocorr)
+3. homescedasticity (i.e const variance of errors)
